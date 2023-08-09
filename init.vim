@@ -20,9 +20,9 @@ set linebreak
 " set colorcolumn=80
 set mouse=n
 set encoding=utf-8
-set number
-set relativenumber
-set ruler
+" set number
+" set relativenumber
+" set ruler
 set cursorline
 syntax enable
 syntax on
@@ -37,11 +37,11 @@ set foldlevel=99
 let &t_SI = "\<Esc>[6 q" . "\<Esc>]12;white\x7"
 let &t_SR = "\<Esc>[3 q" . "\<Esc>]12;white\x7"
 let &t_EI = "\<Esc>[2 q" . "\<Esc>]12;white\x7"
-set splitright
-set splitbelow
+" set splitright
+" set splitbelow
 set shortmess-=S
 set hlsearch
-exec "nohlsearch"
+" exec "nohlsearch"
 "set incsearch
 set ignorecase
 set smartcase
@@ -52,7 +52,7 @@ noremap n nzz
 
 
 " status/command bar
-set laststatus=2
+" set laststatus=2
 set autochdir
 set showcmd
 set formatoptions-=tc
@@ -60,14 +60,14 @@ set formatoptions-=tc
 map s nop
 map J nop
 noremap Q :q<cr>
-noremap S :w<cr>
+" noremap S :w<cr>
 inoremap ( ()<left>
 inoremap () ()
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap ,f <esc>:set nohlsearch<cr>/\(""\\|''\\|()\\|{}\\|><\\|$\)<cr>a
 
-inoremap jk <esc>
+" inoremap jk <esc>
 vnoremap Y "+y
 nnoremap P "+p
 inoremap <c-v> <esc>"+pa
@@ -124,10 +124,10 @@ noremap tmn :-tabmove<cr>
 noremap tmi :+tabmove<cr>
 
 " ============= Resize splits with arrow keys================
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical resize-5<CR>
-noremap <right> :vertical resize+5<CR>
+" noremap <up> :res +5<CR>
+" noremap <down> :res -5<CR>
+" noremap <left> :vertical resize-5<CR>
+" noremap <right> :vertical resize+5<CR>
 
 " ============= 注释 ===============
 autocmd filetype vim inoremap <buffer> <leader>/ <esc>0i" 
