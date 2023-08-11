@@ -15,11 +15,20 @@ set hidden
 set autoindent
 set smartindent
 " set autowrite
+set nobackup
+set noswapfile
+set autoread
+set autowrite
+set confirm
 set wrap
 set linebreak
 " set colorcolumn=80
 set mouse=n
 set encoding=utf-8
+set langmenu=zh_CN.UTF-8
+set helplang=cn
+set termencoding=utf-8
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 " set number
 " set relativenumber
 " set ruler
@@ -46,6 +55,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set updatetime=100
+set list lcs=tab:¦\      " 设置默认开启对齐线
 nnoremap <space><cr> :nohlsearch<cr>
 noremap n nzz
 noremap n nzz
@@ -123,11 +133,11 @@ noremap ti :+tabnext<cr>
 noremap tmn :-tabmove<cr>
 noremap tmi :+tabmove<cr>
 
-" ============= Resize splits with arrow keys================
-" noremap <up> :res +5<CR>
-" noremap <down> :res -5<CR>
-" noremap <left> :vertical resize-5<CR>
-" noremap <right> :vertical resize+5<CR>
+" change window width
+nnoremap <c-up> <c-w>+
+nnoremap <c-down> <c-w>-
+nnoremap <c-left> <c-w><
+nnoremap <c-right> <c-w>>
 
 " ============= 注释 ===============
 autocmd filetype vim inoremap <buffer> <leader>/ <esc>0i" 
@@ -261,3 +271,4 @@ endfunction
 "   autocmd!
 "   autocmd VimEnter * :Vexplore
 " augroup END
+" ...
